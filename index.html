@@ -27,12 +27,35 @@
         top: -40px;
         left: 0;
         }
+        progress{
+        width: 75vw;
+        height: 30px;
+        position: relative;
+        }
+       progress:after {
+          content: '₹'attr(value);
+          position: absolute;
+          font-weight: 100;
+          top: 9px;
+          right: 10px;
+          font-size: 10px;
+          color: #000;
+        }
+        .prog{
+        text-align: center;
+        background: rgba(0,0,0,.5);
+        padding: 10px 10px 30px 10px;
+        }
         </style>
         <title> Teacher's day </title>
     </head>
     <body>
     <div class="head"> 
          <h2>  Checklist of successful Payment</h2>
+      </div>
+      <div class="prog">  
+      <h3> Progress </h3>
+      <progress max="1280" value="0"></progress>
       </div>
           <ol>  
              <li> <embed> Anirudhha Dhar </embed> <input type="checkbox" disabled="true"> </input> ₹40 </li>
@@ -67,7 +90,7 @@
              <li> <embed> Prem Agarwal </embed> <input type="checkbox" disabled="true"> </input> ₹40 </li>    
              <li> <embed> Moubani </embed> <input type="checkbox" disabled="true"> </input> ₹40 </li>
              <li> <embed> Ruchita </embed> <input type="checkbox" disabled="true"> </input> ₹40 </li>
-                       
+                                   
          </ol>
          
          <p>  <strong> Estimated Maximum Budget: ₹800 </strong>
