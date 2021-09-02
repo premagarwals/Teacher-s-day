@@ -22,24 +22,33 @@
         li{
         position: relative;
         }
-        embed{
-        position: absolute;
-        top: -40px;
-        left: 0;
-        }
+        
+        progress[value]::-webkit-progress-bar {
+  background-color: #1e1f21;
+  border-radius: 2px;
+}
+        progress::-webkit-progress-value{
+background: #39ff14;
+box-shadow: 0px 0px 15px #39ff14;
+transition: 0.5s;
+}
         progress{
-        width: 75vw;
-        height: 30px;
         position: relative;
+        overflow: hidden;
+        -webkit-appearance: none;
+        appearance: none;
+        border-radius: 10px;
+        width: 80vw;
+        height: 20px
         }
        progress:after {
           content: '₹'attr(value);
           position: absolute;
           font-weight: 100;
-          top: 9px;
+          top: 4px;
           right: 10px;
           font-size: 10px;
-          color: #000;
+          color: #fff;
         }
         .prog{
         text-align: center;
@@ -54,7 +63,7 @@
          <h2>  Checklist of successful Payment</h2>
       </div>
       <div class="prog">  
-      <h3> Progress </h3>
+      <h3> Progress Bar </h3>
       <progress max="1280" value="0"></progress>
       </div>
           <ol>  
